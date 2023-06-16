@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.poka {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  src: url('../public/fonts/SfProBold.OTF');
+  font-family: "SF Pro Bold";
 }
 
-.poker {
-  border-radius: 12px;
+@font-face {
+  src: url('../public/fonts/SfProMedium.OTF');
+  font-family: "SF Pro Medium";
 }
+
+@font-face {
+  src: url('../public/fonts/SfProRegular.OTF');
+  font-family: "SF Pro Regular";
+}
+
+@font-face {
+  src: url('../public/fonts/CircularSTD.ttf');
+  font-family: "Circular STD";
+}
+
