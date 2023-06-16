@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.poka {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poker {
+  border-radius: 12px;
+}
