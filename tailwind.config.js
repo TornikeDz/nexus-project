@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  mode: "jit",
   theme: {
     fontFamily: {
       'SfBd': ["SF Pro Bold"],
@@ -13,7 +14,23 @@ module.exports = {
       'CrStd': ["Circular STD"]
     },
     extend: {
-      
+      colors: {
+        'white': "#FFFFFF",
+        'light': "#E8E6EC",
+
+        'purple-light': {
+          100: "#F2EFFE",
+          300: "#D7CFFD",
+          400: "#A39CB5",
+          700: "#5F517D"
+        },
+        'violet': {
+          'soft': "#9D71FD",
+          'dark': "#543E81",
+          'darkest': "#1A0745"
+        },
+
+      }
     },
   },
   plugins: [],

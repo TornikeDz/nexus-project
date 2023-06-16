@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   src: url('../public/fonts/SfProBold.OTF');
   font-family: "SF Pro Bold";
@@ -21,4 +26,16 @@
   src: url('../public/fonts/CircularSTD.ttf');
   font-family: "Circular STD";
 }
+/* sm:text-white  sm:bg-violet-soft sm:bg-white sm:text-violet-soft sm:border-none; */
+/* Business Plan */
+.active {
+  @apply sm:text-white sm:bg-violet-soft
+  max-sm:text-violet-soft max-sm:bg-white max-sm:border-b-2 border-solid max-sm:border-b-violet-soft
+}
 
+.small_screen_plan_list {
+  @apply  max-sm:gap-0 max-sm:w-[440px] 
+}
+.small_screen_plan__list__items {
+  @apply max-sm:w-[33%] max-sm:text-center max-sm:border-none
+}
