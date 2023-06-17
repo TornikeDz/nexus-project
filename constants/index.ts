@@ -1,5 +1,12 @@
 export const businessPlan = ["Small Business", "Medium Business", "Enterprise"];
 
+export const client = {
+    name: "Lauren Robson",
+    position: "HR Director",
+    description: "“I want to lower PTO liability and keep my employess happy. I want to lower PTO liability.”",
+    avatar: "/girlAvatar.webp"
+}
+
 export const intergrations = [
     {
         name: "Sapling",
