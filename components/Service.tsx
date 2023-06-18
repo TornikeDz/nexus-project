@@ -2,36 +2,39 @@
 
 import React from 'react';
 import Image from 'next/image';
-import {services} from '@/constants'
+import {ServiceModel} from '@/types'
 
-const service = services[0];
-const Service = () => {
-
+const Service = ({name, description, icon, activeStatus, serviceStatus}: ServiceModel) => {
+    const changeServiceStatus = () => {
+        console.log(name);
+        // serviceStatus({type: 'service', name: name, activeStatus})
+    }
 
     return (
-        <div className="max-w-[280px] pl-4 pr-[33px] py-4 
+        <div className={`max-w-[280px] pl-4 pr-[33px] py-4 
             flex justify-between items-center
-            border rounded-2xl border-light service_active">
+            border rounded-2xl border-light
+            ${activeStatus ? "service_active " : ''}`} >
             <div className="flex gap-2">
             <Image
-                src={service.icon}
+                src={icon}
                 width={48}
                 height={48}
-                alt={`${service.name}'s icon`}
-                className="rounded-2xl"
+                alt={`${name}'s icon`}
+                className="rounded-2xl w-[48px] h-[48px]"
             />
             <div className="flex-col">
                 <div className="font-SfMd block tracking-wider leading-[26px]  text-violet-darkest">
-                    {service.name}
+                    {name}
                 </div>
                 <div className="font-SfRg tracking-wider text-xs leading-[19px] text-purple-light-700">
-                    {service.description}
+                    {description}
                 </div>
             </div>
             </div>
-            <label htmlFor="checkbox" className="switch relative inline-block w-[22px] h-[14px] 
+            <label  htmlFor="checkbox" className="switch relative inline-block w-[22px] h-[14px] 
                 border-2  rounded-2xl cursor-pointer border-purple-light-400">
-                <input id="checkbox" type="checkbox" 
+                <input id="checkbox" type="checkbox" checked={activeStatus} onChange={changeServiceStatus}
                 className="w-0 h-0 opacity-0 "/>
                 <span className="slider absolute  inset-0"/>
             </label>
@@ -40,12 +43,3 @@ const Service = () => {
 }
 
 export default Service
-
-// <label className="relative inline-block w-[22px] h-3.5
-// border-2 border-purple-light-100 rounded-2xl">
-//     <input type="checkbox" checked={check} onChange={setCheckStatus}
-//     className="absolute cursor-pointer inset-0 before:w-4" content={""}/>
-//     {/*   */}
-//     <span className="slider"/>
-// </label>
-

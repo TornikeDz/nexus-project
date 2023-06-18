@@ -12,7 +12,7 @@ function Client() {
                 width={86}
                 height={86}
                 alt={`${client.name}'s avatar`}
-                className="absolute top-[-30px] left-[50%] translate-x-[-50%]"
+                className="absolute top-[-30px] max-sm:top-[-43px] left-[50%] translate-x-[-50%] rounded-xl"
                 />
                 <div className="font-SfBd text-lg leading-[18px] text-violet-darkest pt-[70px] max-sm:pt-[63px]">
                     {client.name}

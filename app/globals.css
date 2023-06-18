@@ -28,8 +28,8 @@
 }
 
 /* Business Plan */
-.active {
-  @apply sm:text-white sm:bg-violet-soft
+.small_screen_plan__list__items.active {
+  @apply sm:text-white sm:bg-violet-soft opacity-100
   max-sm:text-violet-soft max-sm:bg-white max-sm:border-b-2 border-solid max-sm:border-b-violet-soft
 }
 
@@ -37,7 +37,7 @@
   @apply  max-sm:gap-0 max-sm:w-[440px] 
 }
 .small_screen_plan__list__items {
-  @apply max-sm:w-[33%] max-sm:text-center 
+  @apply max-sm:w-[146px] max-sm:text-center 
 }
 
 .slider::before {

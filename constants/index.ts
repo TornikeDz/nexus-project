@@ -7,7 +7,7 @@ export const client = {
     avatar: "/girlAvatar.webp"
 }
 
-export const services = [
+export const servicesLeft = [
     {
         name: "Sapling",
         description: "HR Management",
@@ -23,6 +23,9 @@ export const services = [
         description: "Employers Base",
         icon: "/xeroLogo.svg"
     },
+]
+
+export const servicesRight = [
     {
         name: "Rippling",
         description: "HR Management",
