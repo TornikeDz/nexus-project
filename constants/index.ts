@@ -7,7 +7,7 @@ export const client = {
     avatar: "/girlAvatar.webp"
 }
 
-export const intergrations = [
+export const services = [
     {
         name: "Sapling",
         description: "HR Management",

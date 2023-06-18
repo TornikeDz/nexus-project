@@ -26,7 +26,7 @@
   src: url('../public/fonts/CircularSTD.ttf');
   font-family: "Circular STD";
 }
-/* sm:text-white  sm:bg-violet-soft sm:bg-white sm:text-violet-soft sm:border-none; */
+
 /* Business Plan */
 .active {
   @apply sm:text-white sm:bg-violet-soft
@@ -37,5 +37,31 @@
   @apply  max-sm:gap-0 max-sm:w-[440px] 
 }
 .small_screen_plan__list__items {
-  @apply max-sm:w-[33%] max-sm:text-center max-sm:border-none
+  @apply max-sm:w-[33%] max-sm:text-center 
+}
+
+.slider::before {
+  @apply absolute h-[7px] w-[7px] rounded-full left-[2px] top-1/2 bg-purple-light-400 translate-y-[-50%] duration-[600ms] content-[""]
+}
+
+
+
+input:checked{
+  @apply bg-violet-soft
+}
+
+input:checked, .switch {
+  @apply border-violet-soft
+}
+
+input:checked + .slider {
+  @apply bg-violet-soft
+}
+
+input:checked + .slider::before {
+  @apply translate-x-[7px] translate-y-[-50%] duration-[600ms] bg-white
+}
+
+.service_active {
+  @apply border-2 border-violet-soft
 }
