@@ -30,7 +30,7 @@
 /* Business Plan */
 .small_screen_plan__list__items.active {
   @apply sm:text-white sm:bg-violet-soft opacity-100
-  max-sm:text-violet-soft max-sm:bg-white max-sm:border-b-2 border-solid max-sm:border-b-violet-soft
+  max-sm:font-SfBd max-sm:text-violet-soft max-sm:bg-white max-sm:border-b-2 border-solid max-sm:border-b-violet-soft
 }
 
 .small_screen_plan_list {
