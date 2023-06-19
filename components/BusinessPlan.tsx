@@ -1,7 +1,5 @@
-import React from 'react';
 import { businessPlan } from '@/constants';
-
-import { BusinessPlans, ActionType } from '@/types';
+import { BusinessPlans } from '@/types';
 
 const BusinessPlan = ({activePlan, activatePlan}: BusinessPlans) => {
 

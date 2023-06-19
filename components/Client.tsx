@@ -5,7 +5,7 @@ import { WaveSVG, LineSVG } from '../public/SVGs';
 
 const Client = ({activatedPlanList}: ActivatedPlansListing) => {
   return (
-        <div className="flex relative top-[50px] ">
+        <div className="flex relative top-[30px] max-sm:top-16">
             <div className="relative  flex flex-col max-lg:hidden">
                 <div className={`w-[120px] min-h-[100px] relative top-[28px] line-size fill-light 
                 ${activatedPlanList.includes(servicesLeft[0].name) ? 'line-on' : ''}`}>
@@ -20,7 +20,7 @@ const Client = ({activatedPlanList}: ActivatedPlansListing) => {
                     <WaveSVG />
                 </div>
             </div>
-            <div className="max-w-[380px] min-h-[268px]  bg-purple-light-100
+            <div className="max-w-[380px] max-sm:max-w-[323px] min-h-[268px] max-sm:min-h-[240px] bg-purple-light-100
                 rounded-3xl border-2 border-violet-soft flex flex-col relative pl-[41px] pr-[39px] text-center">
                 <Image
                     src={client.avatar}

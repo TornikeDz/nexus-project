@@ -1,6 +1,7 @@
-import { ReducerState, ActionType } from '@/types';
+import { businessPlan } from '@/constants';
+import { ReducerState, ActionType, InitialState } from '@/types';
 
-function reducer(state: ReducerState, action: ActionType) {
+export function reducer(state: ReducerState, action: ActionType) {
     console.log(action);
     switch(action.type) {
       case 'plan':
@@ -24,4 +25,14 @@ function reducer(state: ReducerState, action: ActionType) {
     }
   }
 
-export default reducer;
+export const initialState: InitialState = {
+  active: businessPlan[0],
+  plansList: {
+    [businessPlan[0]]: ["Zenefits"],
+    [businessPlan[1]]: ["Workday", "Sapling"],
+    [businessPlan[2]]: ["Xero", "Rippling", "Expensify"]
+  }
+};
+
+initialState.activePlanList = initialState.plansList[initialState.active]
+

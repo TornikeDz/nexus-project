@@ -70,9 +70,6 @@ input:checked + .slider::before {
 .medium-width {
   @apply max-lg:gap-5 max-lg:flex-wrap
 }
-/* .line-size {
-  @apply max-lg:w-[100px]
-} */
 
 .line-on {
   fill: #9D71FD;

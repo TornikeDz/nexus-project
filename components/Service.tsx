@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {ServiceModel} from '@/types'
+import { ServiceModel } from '@/types'
 
 const Service = ({name, description, icon, activeStatus, serviceStatus}: ServiceModel) => {
     const changeServiceStatus = () => {
@@ -8,9 +8,10 @@ const Service = ({name, description, icon, activeStatus, serviceStatus}: Service
 
     return (
         <div className={`w-[280px] pl-4 pr-[21px] py-4 
-            flex justify-between items-center
+            flex justify-between items-center 
             border rounded-2xl border-light
-            ${activeStatus ? "service_active " : ''}`} >
+            max-sm:w-[324px] 
+            ${activeStatus ? "service_active " : ''}`}>
             <div className="flex gap-2">
             <Image
                 src={icon}
