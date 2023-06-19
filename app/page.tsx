@@ -2,7 +2,7 @@
 import { reducer, initialState} from '../Reducer';
 import React, { useReducer } from 'react';
 import { Heading, BusinessPlan, Description, ClientPreferences } from '@/components';
-import { ReducerState, ActionType, InitialState } from '@/types';
+import { ReducerState, ActionType, InitialState, ActionBaseType, } from '@/types';
 
 export default function Home() {
   const [state, dispatch]: ReducerState | any = useReducer<React.Reducer<ActionType, InitialState>>(reducer, initialState);  

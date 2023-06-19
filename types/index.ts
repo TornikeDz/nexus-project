@@ -28,6 +28,13 @@ export interface ActionType {
     payload?: string
 }
 
+export interface ActionBaseType {
+    type: 'plan' | 'service';
+    name: string;
+    activeStatus?: boolean;
+    payload: string
+}
+
 export interface ReducerState {
     active: string,
     activePlansList?: ActivatedPlansListing,
