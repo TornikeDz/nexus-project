@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch } from "react";
 
 export interface BusinessPlans {
     activePlan: string;

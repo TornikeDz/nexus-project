@@ -1,16 +1,11 @@
 import { businessPlan } from '@/constants';
-import { ReducerState, ActionType, InitialState, ActionBaseType } from '@/types';
+import { InitialState, ActionBaseType,  } from '@/types';
 
-export function reducer(state: ReducerState, action: ActionBaseType) {
-    console.log(action);
+export function reducer(state: InitialState, action: ActionBaseType) {
     switch(action.type) {
       
       case 'plan':
-        console.log('action', action)
-        console.log('ss',{...state,
-          active: action.payload, 
-          activePlanList: state.plansList[action.payload] 
-        })
+        
         return {...state,
           active: action.payload, 
           activePlanList: state.plansList[action.payload] 
@@ -27,7 +22,7 @@ export function reducer(state: ReducerState, action: ActionBaseType) {
        }
   
        state.plansList[state.active] = temp;
-       console.log('ss2',{...state, activePlanList: temp});
+
        return {...state, activePlanList: temp}
 
        default:
