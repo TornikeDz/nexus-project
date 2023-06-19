@@ -29,6 +29,9 @@ export function reducer(state: ReducerState, action: ActionBaseType) {
        state.plansList[state.active] = temp;
        console.log('ss2',{...state, activePlanList: temp});
        return {...state, activePlanList: temp}
+
+       default:
+        return state;
     }
   }
 

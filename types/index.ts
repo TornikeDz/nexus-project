@@ -2,14 +2,14 @@ import { Dispatch, SetStateAction } from "react";
 
 export interface BusinessPlans {
     activePlan: string;
-    activatePlan: Dispatch<ActionType>;
+    activatePlan: Dispatch<ActionBaseType | ActionType>;
 }
 export interface ServiceModel {
     name: string;
     description: string;
     icon: string;
     activeStatus: boolean;
-    serviceStatus: Dispatch<ActionType>;
+    serviceStatus: Dispatch<ActionType | ActionBaseType>;
 }
 
 export interface InitialState {
