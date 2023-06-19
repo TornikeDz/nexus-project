@@ -13,7 +13,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col sm:gap-[50px]">
           <BusinessPlan activePlan={state.active} activatePlan={dispatch}/>
-          <ClientPreferences activatedPlanList={state.activePlanList} serviceStatus={dispatch}/>
+          <ClientPreferences activatedPlanList={state.activePlanList!} serviceStatus={dispatch}/>
         </div>
       </div>
   )

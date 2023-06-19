@@ -1,8 +1,8 @@
 import { Dispatch } from "react";
 
-export interface BusinessPlans {
+export interface BusinessPlans<T> {
     activePlan: string;
-    activatePlan: Dispatch<ActionBaseType | ActionType>;
+    activatePlan: Dispatch<T>;
 }
 export interface ServiceModel {
     name: string;
