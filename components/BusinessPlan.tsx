@@ -1,11 +1,9 @@
-"use client";
-
 import React from 'react';
 import { businessPlan } from '@/constants';
 
-import { businessPlans } from '@/types';
+import { BusinessPlans, ActionType } from '@/types';
 
-const BusinessPlan = ({activePlan, activatePlan}: businessPlans) => {
+const BusinessPlan = ({activePlan, activatePlan}: BusinessPlans) => {
 
     const setActivePlan = (currentPlan: string) => {
         activatePlan({type: 'plan', payload: currentPlan});

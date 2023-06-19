@@ -1,20 +1,54 @@
 import { Dispatch, SetStateAction } from "react";
 
-export interface businessPlans {
+export interface BusinessPlans {
     activePlan: string;
-    activatePlan: Dispatch<SetStateAction<string>>
+    activatePlan: Dispatch<ActionType>;
 }
-
 export interface ServiceModel {
-    name: string,
-    description: string,
-    icon: string,
-    activeStatus: boolean
+    name: string;
+    description: string;
+    icon: string;
+    activeStatus: boolean;
+    serviceStatus: Dispatch<ActionType>;
 }
 
-export interface businessPlanReducer {
-    state: string,
-    action: string
+export interface InitialState {
+    active: string;
+    plansList: {
+        [x: string]: string[];
+    };
+    activePlanList?: string[];
 }
 
+// reducer inputs
+export interface ActionType {
+    type: 'plan' | 'service';
+    name?: string;
+    activeStatus?: boolean;
+    payload?: string
+}
+
+export interface ReducerState {
+    active: string,
+    activePlansList?: ActivatedPlansListing,
+    plansList: ObjectOfArrays
+}
+
+
+export interface ActivatedPlansListing {
+    activatedPlanList: string[]
+}
+
+export interface ObjectOfArrays {
+    [key: string]: string[];
+  }
+
+export interface ClientPref extends  ActivatedPlansListing{
+    serviceStatus: any;
+}
+
+  // svg component color
+export interface Color {
+    color: string
+  }
 // Dispatch<SetStateAction<string>>

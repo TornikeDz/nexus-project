@@ -65,3 +65,17 @@ input:checked + .slider::before {
 .service_active {
   @apply border-2 border-violet-soft
 }
+
+
+.medium-width {
+  @apply max-lg:gap-5 max-lg:flex-wrap
+}
+/* .line-size {
+  @apply max-lg:w-[100px]
+} */
+
+.line-on {
+  fill: #9D71FD;
+  z-index: 2;
+}
+
